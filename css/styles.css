@@ -1,0 +1,183 @@
+/*****************************
+Font Monstserrat
+*****************************/
+@font-face {
+    font-family: "Monstserrat", "sans-serif";
+    src: url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&display=swap") format("woff2");
+    font-weight: 400 600 900;
+} 
+/*****************************
+Main styles
+*****************************/
+:root{
+    --text-dark-bg-color: #2A2A2A ;
+    --text-contrast-dark-bg-color: #FFFFFF;
+    --primary-color:  #79BAAB;
+    --primary-color-light: #C5E1DB;
+    --constrast-color: #DC4A23;
+    --contrast-light-color: #EB9781;
+    --body-bg-color: #FFF7E8;
+    --font: "Montserrat", "sans-serif";
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    font-weight: 400;
+    color: var(--text-color);
+    line-height: 1.5;    
+}
+h1, h2 {   
+    font-weight: 700;
+}
+
+p {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+a {
+    color: var(--contrast-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--text-color);
+}
+
+cite, address {
+    font-style: normal;
+}
+
+abbr {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 3.25rem;
+    line-height: 1em;
+    margin-bottom: 1.5rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.img-fluid {
+    max-width: 100%;
+}
+
+.video-fluid {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+}
+
+.video-fluid-item {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.video-fluid::before {
+    display: block;
+    content: "";
+    padding-top: 56.25%;
+}
+
+/*****************************
+Class for hide an element that only is visible in accessibility screens
+*****************************/
+.sr {
+    position:absolute;
+    height:1px;    
+    width:1px;    
+    overflow:hidden;    
+    clip:rect(1px, 1px, 1px, 1px);
+}
+/*****************************
+Site containers
+*****************************/
+header{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+footer{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: var(--body-bg-color);
+    color: var(--text-contrast-dark-bg-color);
+    text-align: center;
+}
+main{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+section{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 100%;
+}
+
+@media (min-width: 576px) {
+    .container {
+      max-width: 540px;
+    }
+}
+  
+@media (min-width: 768px) {
+    .container {
+      max-width: 720px;
+    }
+}
+  
+@media (min-width: 992px) {
+    .container {
+      max-width: 960px;
+    }
+}
+  
+@media (min-width: 1200px) {
+    .container {
+      max-width: 1140px;
+    }
+}
+/*****************************
+Header content
+*****************************/
+.brand-logo{
+text-align: center;
+}
+@media (min-width: 992px) {
+    .brand-logo{
+        text-align: left;
+    }
+}
+

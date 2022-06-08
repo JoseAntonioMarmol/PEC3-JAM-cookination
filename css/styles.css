@@ -1,18 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&display=swap');
+
 /*****************************
 Font Monstserrat
 *****************************/
-@font-face {
+/*@font-face {
     font-family: "Monstserrat", "sans-serif";
-    src: url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&display=swap") format("woff2");
+    src: url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&display=swap') format("woff2");
     font-weight: 400 600 900;
-} 
+} */
 /*****************************
 Main styles
 *****************************/
-:root{
-    --text-dark-bg-color: #2A2A2A ;
+:root {
+    --text-dark-bg-color: #2A2A2A;
     --text-contrast-dark-bg-color: #FFFFFF;
-    --primary-color:  #79BAAB;
+    --primary-color: #79BAAB;
     --primary-color-light: #C5E1DB;
     --constrast-color: #DC4A23;
     --contrast-light-color: #EB9781;
@@ -20,23 +22,29 @@ Main styles
     --font: "Montserrat", "sans-serif";
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
+    font-family: 'Montserrat', sans-serif;
 }
 
-html{
+html {
     height: 100%;
 }
 
-body{
+body {
+
     font-weight: 400;
-    color: var(--text-color);
-    line-height: 1.5;    
+    color: var(--text-dark-bg-color);
+    /*line-height: 1.5;*/
 }
-h1, h2 {   
+
+h1 {
+    font-weight: 900;
+}
+
+h2 {
     font-weight: 700;
 }
 
@@ -54,7 +62,8 @@ a:hover {
     color: var(--text-color);
 }
 
-cite, address {
+cite,
+address {
     font-style: normal;
 }
 
@@ -110,74 +119,174 @@ h3 {
 Class for hide an element that only is visible in accessibility screens
 *****************************/
 .sr {
-    position:absolute;
-    height:1px;    
-    width:1px;    
-    overflow:hidden;    
-    clip:rect(1px, 1px, 1px, 1px);
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
 }
+
 /*****************************
 Site containers
 *****************************/
-header{
+header {
     padding-top: 15px;
     padding-bottom: 15px;
+    text-align: center;
 }
-footer{
+
+footer {
     padding-top: 50px;
     padding-bottom: 50px;
     background-color: var(--body-bg-color);
     color: var(--text-contrast-dark-bg-color);
     text-align: center;
 }
-main{
+
+main {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+section {
     padding-top: 50px;
     padding-bottom: 50px;
 }
-section{
-    padding-top: 50px;
-    padding-bottom: 50px;
-}
+
 .container {
-    margin-right: auto;
-    margin-left: auto;
+    margin-right: 0 auto;
+    margin-left: 0 auto;
     padding-right: 15px;
     padding-left: 15px;
     width: 100%;
+    text-align: center;
 }
 
 @media (min-width: 576px) {
     .container {
-      max-width: 540px;
+        max-width: 540px;
     }
 }
-  
+
 @media (min-width: 768px) {
     .container {
-      max-width: 720px;
+        max-width: 720px;
     }
 }
-  
+
 @media (min-width: 992px) {
     .container {
-      max-width: 960px;
+        max-width: 960px;
     }
 }
-  
+
 @media (min-width: 1200px) {
     .container {
-      max-width: 1140px;
+        max-width: 1140px;
     }
 }
+
 /*****************************
 Header content
 *****************************/
-.brand-logo{
-text-align: center;
+.brand-logo {
+    text-align: center;
 }
+
 @media (min-width: 992px) {
-    .brand-logo{
+    .brand-logo {
         text-align: left;
     }
 }
 
+/*****************************
+index.html
+*****************************/
+.meal-search-bar {
+    height: 50vh;
+    /*  background-color: var(--bg-dark-color);*/
+    background-size: cover;
+    background-image: url(../img/knife-bg.jpg);
+    background-repeat: no-repeat;
+    /*  background-size: 50%;*/
+    /* background-position: top left;*/
+    color: var(--text-dark-bg-color);
+    padding: 0 auto;
+    width: 100%;
+    position: relative;
+    /* display: flex;*/
+}
+
+.meal-search-bar h1 {
+    font-size: 2.75rem;
+    font-weight: 900;
+    /**negrita*/
+    font-weight: bold;
+}
+
+/*.meal-search-bar p {
+    font-size: 1.75rem;
+    font-style: italic;
+}*/
+
+h2+p.lead {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    margin-top: -1.5rem;
+}
+
+.missions div {
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.missions h3 {
+    line-height: 1.2;
+}
+
+@media (min-width: 992px) {
+    .meal-search-bar {
+        height: 30vh;
+        background-size: contain;
+        background-position: center center;
+    }
+
+    .meal-search-bar h1 {
+        font-size: 6.25rem;
+        font-weight: 700;
+    }
+
+    .meal-search-bar p {
+        font-size: 3.25rem;
+    }
+
+    .missions {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .missions>div {
+        width: 48%;
+        margin-bottom: 0;
+        margin-left: 1%;
+        margin-right: 1%;
+    }
+
+    .missions div.content {
+        padding: 15px;
+    }
+}
+
+@media (min-width: 992px) {
+    .missions>div {
+        width: 33.33333%;
+        margin-bottom: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .missions div:nth-child(odd) {
+        background-color: var(--bg-light-color);
+    }
+}
